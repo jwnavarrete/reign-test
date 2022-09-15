@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Container from "./components/Container";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import ButtonGroup from "./components/ButtonGroup";
+import Button from "./components/Button";
+import Select from "./components/Select";
+import Option from "./components/Option";
+//
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header>HACKER NEWS</Header>
+      <Main>
+        <ButtonGroup>
+          <Button active>All</Button>
+          <Button>My Faves</Button>
+        </ButtonGroup>
+
+        <div>
+          <Select>
+            <Option disabled selected>
+              Select your news
+            </Option>
+            <Option>Angular</Option>
+            <Option>Reats</Option>
+            <Option>Vuejs</Option>
+          </Select>
+        </div>
+      </Main>
+    </Container>
   );
 }
 
